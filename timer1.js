@@ -1,6 +1,9 @@
 const alarm = setInterval(() => {
   const noise = "Beep Beep!\n";
   let args = process.argv.slice(2);
+  if(args === '' || isNaN(args) || args < 0 ){
+    //do nothing
+  }
   args.forEach(function (val) {
     val = val * 1000;
     setTimeout(() => {
